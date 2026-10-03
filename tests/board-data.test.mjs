@@ -152,8 +152,14 @@ test('every board has a route and no board page uses modal or popup navigation',
 });
 
 test('release repository includes CI workflow and documentation', () => {
-  assert.equal(existsSync(new URL('../.github/workflows/pages.yml', import.meta.url)), true, 'Pages workflow should exist');
+  const workflowUrl = new URL('../.github/workflows/pages.yml', import.meta.url);
+  assert.equal(existsSync(workflowUrl), true, 'Pages workflow should exist');
   assert.equal(existsSync(new URL('../README.md', import.meta.url)), true, 'README should exist');
+});
+
+test('Pages workflow self-enables GitHub Pages for a fresh repository', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/pages.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /uses:\s*actions\/configure-pages@v5[\s\S]*?with:[\s\S]*?enablement:\s*true/, 'configure-pages must enable Pages when the repo has no Pages site yet');
 });
 
 test('validator rejects non-numeric or out-of-range note coordinates', async () => {
