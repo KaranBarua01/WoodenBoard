@@ -1,0 +1,10 @@
+{
+  "name": "woodenboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate-data.mjs data/boards.json"
+  }
+}

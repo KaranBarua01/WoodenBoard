@@ -1,0 +1,2392 @@
+{
+  "boards": [
+    {
+      "id": "main",
+      "title": "CHUCK — Ecosystem",
+      "route": "index.html",
+      "notes": [
+        {
+          "id": "chuck",
+          "title": "CHUCK",
+          "type": "Build",
+          "date": "2026-10-04",
+          "summary": "The operational intelligence ecosystem: conversation, QBOs, meetings, COE data, automation and reliability.",
+          "role": "center",
+          "x": 50,
+          "y": 50,
+          "rotation": -1,
+          "scale": 1.08
+        },
+        {
+          "id": "family-conversation",
+          "title": "Conversation Intelligence",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Natural language, follow-ups, corrections, references and explainability.",
+          "role": "family",
+          "relatedBoard": "conversation",
+          "x": 18,
+          "y": 20,
+          "rotation": -5
+        },
+        {
+          "id": "family-qbo",
+          "title": "QBO Intelligence",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Meeting + NDA + RFQ truth, analytics, evidence and scoreboards.",
+          "role": "family",
+          "relatedBoard": "qbo",
+          "x": 46,
+          "y": 16,
+          "rotation": 3
+        },
+        {
+          "id": "family-meetings",
+          "title": "Meetings & Scheduling",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Meeting lookup, confirmation status, reminders and slot planning.",
+          "role": "family",
+          "relatedBoard": "meetings",
+          "x": 79,
+          "y": 23,
+          "rotation": -3
+        },
+        {
+          "id": "family-mapping",
+          "title": "Mapping & Admin",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Who owns what, organization mappings, protected writes and audit history.",
+          "role": "family",
+          "relatedBoard": "mapping-admin",
+          "x": 86,
+          "y": 53,
+          "rotation": 4
+        },
+        {
+          "id": "family-performance",
+          "title": "Performance & Reliability",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Workers, queues, latency, idempotency, diagnostics and safe deployments.",
+          "role": "family",
+          "relatedBoard": "performance-reliability",
+          "x": 73,
+          "y": 82,
+          "rotation": -4
+        },
+        {
+          "id": "family-reuse",
+          "title": "COE Reuse & Outreach",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Research once, reuse intelligently, then feed outreach evidence back into the database.",
+          "role": "family",
+          "relatedBoard": "reuse-outreach",
+          "x": 42,
+          "y": 86,
+          "rotation": 5
+        },
+        {
+          "id": "family-data",
+          "title": "Data Architecture",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "D1, Bridge, COE_MASTER, NA databases, indexes, grids and candidate-only reads.",
+          "role": "family",
+          "relatedBoard": "data-architecture",
+          "x": 12,
+          "y": 72,
+          "rotation": -3
+        },
+        {
+          "id": "family-cleaner",
+          "title": "COE Cleaner",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Turns raw research into usable CALL_DATA / EMAIL_DATA and safely removes known bad or completed leads.",
+          "role": "family",
+          "relatedBoard": "cleaner",
+          "x": 11,
+          "y": 43,
+          "rotation": 4
+        },
+        {
+          "id": "support-docs",
+          "title": "Documents / Line Cards",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Retrieval support connected to ownership and account context.",
+          "role": "support",
+          "relatedBoard": "mapping-admin",
+          "x": 29,
+          "y": 36,
+          "rotation": 2,
+          "scale": 0.76
+        },
+        {
+          "id": "support-scoreboards",
+          "title": "Scoreboards / Reporting",
+          "type": "Impact",
+          "date": "Approx. Aug 2026",
+          "summary": "Weekly and monthly performance views derived from QBO truth.",
+          "role": "support",
+          "relatedBoard": "qbo",
+          "x": 66,
+          "y": 38,
+          "rotation": -2,
+          "scale": 0.78
+        },
+        {
+          "id": "support-future",
+          "title": "Future / Planned",
+          "type": "Planned",
+          "date": "Planned — Oct 2026 discussion",
+          "summary": "Planned queue position + ETA and future operational improvements.",
+          "role": "support",
+          "status": "planned",
+          "relatedBoard": "performance-reliability",
+          "x": 62,
+          "y": 65,
+          "rotation": 3,
+          "scale": 0.76
+        }
+      ],
+      "connections": [
+        {
+          "from": "chuck",
+          "to": "family-conversation",
+          "type": "dependency",
+          "bend": -35
+        },
+        {
+          "from": "chuck",
+          "to": "family-qbo",
+          "type": "dependency",
+          "bend": 20
+        },
+        {
+          "from": "chuck",
+          "to": "family-meetings",
+          "type": "dependency",
+          "bend": -30
+        },
+        {
+          "from": "chuck",
+          "to": "family-mapping",
+          "type": "dependency",
+          "bend": 35
+        },
+        {
+          "from": "chuck",
+          "to": "family-performance",
+          "type": "dependency",
+          "bend": -20
+        },
+        {
+          "from": "chuck",
+          "to": "family-reuse",
+          "type": "dependency",
+          "bend": 30
+        },
+        {
+          "from": "chuck",
+          "to": "family-data",
+          "type": "dependency",
+          "bend": -30
+        },
+        {
+          "from": "chuck",
+          "to": "family-cleaner",
+          "type": "dependency",
+          "bend": 22
+        },
+        {
+          "from": "family-conversation",
+          "to": "family-qbo",
+          "type": "dependency",
+          "bend": -20,
+          "label": "asks about"
+        },
+        {
+          "from": "family-qbo",
+          "to": "family-meetings",
+          "type": "dependency",
+          "bend": 18,
+          "label": "status + outcomes"
+        },
+        {
+          "from": "family-cleaner",
+          "to": "family-data",
+          "type": "upgrade",
+          "bend": 16,
+          "label": "D1 path"
+        },
+        {
+          "from": "family-data",
+          "to": "family-reuse",
+          "type": "dependency",
+          "bend": -18,
+          "label": "reuse store"
+        },
+        {
+          "from": "family-mapping",
+          "to": "family-conversation",
+          "type": "dependency",
+          "bend": -70,
+          "label": "ownership context"
+        },
+        {
+          "from": "family-performance",
+          "to": "family-data",
+          "type": "dependency",
+          "bend": 50,
+          "label": "heavy jobs"
+        },
+        {
+          "from": "family-performance",
+          "to": "family-conversation",
+          "type": "dependency",
+          "bend": 70,
+          "label": "request path"
+        },
+        {
+          "from": "family-qbo",
+          "to": "support-scoreboards",
+          "type": "impact",
+          "bend": 10
+        },
+        {
+          "from": "family-mapping",
+          "to": "support-docs",
+          "type": "dependency",
+          "bend": 12
+        },
+        {
+          "from": "family-performance",
+          "to": "support-future",
+          "type": "planned",
+          "dashed": true,
+          "bend": 10
+        }
+      ]
+    },
+    {
+      "id": "conversation",
+      "title": "Conversation Intelligence",
+      "route": "boards/conversation.html",
+      "notes": [
+        {
+          "id": "rigid",
+          "title": "Rigid Commands",
+          "type": "Problem",
+          "date": "Approx. Aug 2026",
+          "summary": "Early commands forced users to repeat full context and exact phrasing.",
+          "x": 13,
+          "y": 22,
+          "rotation": -5
+        },
+        {
+          "id": "natural",
+          "title": "Natural-Language Router",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Chuck learned to route normal business questions instead of relying only on rigid commands.",
+          "x": 34,
+          "y": 15,
+          "rotation": 3
+        },
+        {
+          "id": "followups",
+          "title": "Multi-turn Follow-ups",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Follow-up operators preserve compatible scope instead of starting every question from zero.",
+          "x": 56,
+          "y": 25,
+          "rotation": -4
+        },
+        {
+          "id": "entity-pivot",
+          "title": "“What about Equimin?”",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Entity pivots replace only the entity while retaining compatible metrics and period.",
+          "x": 78,
+          "y": 14,
+          "rotation": 2,
+          "version": "3.9.95ph1"
+        },
+        {
+          "id": "date-pivot",
+          "title": "“And July?”",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Temporal pivots replace the period while retaining the selected account or person.",
+          "x": 86,
+          "y": 38,
+          "rotation": -3,
+          "version": "3.9.95ph1"
+        },
+        {
+          "id": "corrections",
+          "title": "Corrections",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Phrases like “Cancelled, not No Show” correct stale analytical state instead of broadening it.",
+          "x": 65,
+          "y": 48,
+          "rotation": 4,
+          "version": "3.9.96ph1"
+        },
+        {
+          "id": "references",
+          "title": "Pronouns & References",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "“Who owns them?” and ordinal references resolve against the visible business context.",
+          "x": 41,
+          "y": 43,
+          "rotation": -2,
+          "version": "3.9.96ph1"
+        },
+        {
+          "id": "where",
+          "title": "“Where were we?”",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Social interruptions no longer destroy the last valid business topic.",
+          "x": 21,
+          "y": 49,
+          "rotation": 5,
+          "version": "3.9.96ph1"
+        },
+        {
+          "id": "state-bloat",
+          "title": "Conversation State Bloat",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Rich multi-turn state could become large, stale or ambiguous if every result was retained blindly.",
+          "x": 29,
+          "y": 73,
+          "rotation": -4
+        },
+        {
+          "id": "bounded",
+          "title": "Bounded State + Thread Isolation",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "State is bounded and Slack roots/threads keep independent context.",
+          "x": 52,
+          "y": 78,
+          "rotation": 3,
+          "version": "3.9.95ph1"
+        },
+        {
+          "id": "explain",
+          "title": "Explain + Exact Evidence",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Users can ask why, show all, more detail, or exact records without rebuilding the question.",
+          "x": 75,
+          "y": 71,
+          "rotation": -5,
+          "version": "3.9.97-ph1p0.3"
+        },
+        {
+          "id": "trusted",
+          "title": "Human vs Trusted-Agent Output",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Human Slack controls hide raw machine payloads while trusted agents retain structured audit capability.",
+          "x": 90,
+          "y": 66,
+          "rotation": 2,
+          "version": "3.9.97-ph1p0.4.2"
+        },
+        {
+          "id": "conv-impact",
+          "title": "Conversation Impact",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Less repeated typing, fewer ambiguous follow-ups, and auditable answers with preserved evidence lineage.",
+          "x": 70,
+          "y": 91,
+          "rotation": 4,
+          "impact": "Saves human time + reduces query repetition"
+        }
+      ],
+      "connections": [
+        {
+          "from": "rigid",
+          "to": "natural",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "natural",
+          "to": "followups",
+          "type": "upgrade",
+          "bend": 16
+        },
+        {
+          "from": "followups",
+          "to": "entity-pivot",
+          "type": "upgrade",
+          "bend": -18
+        },
+        {
+          "from": "followups",
+          "to": "date-pivot",
+          "type": "upgrade",
+          "bend": 30
+        },
+        {
+          "from": "followups",
+          "to": "corrections",
+          "type": "upgrade",
+          "bend": -8
+        },
+        {
+          "from": "followups",
+          "to": "references",
+          "type": "upgrade",
+          "bend": 24
+        },
+        {
+          "from": "followups",
+          "to": "where",
+          "type": "upgrade",
+          "bend": 42
+        },
+        {
+          "from": "references",
+          "to": "state-bloat",
+          "type": "problem",
+          "bend": 20
+        },
+        {
+          "from": "corrections",
+          "to": "state-bloat",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "state-bloat",
+          "to": "bounded",
+          "type": "fix",
+          "bend": 18
+        },
+        {
+          "from": "bounded",
+          "to": "explain",
+          "type": "upgrade",
+          "bend": -18
+        },
+        {
+          "from": "explain",
+          "to": "trusted",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "bounded",
+          "to": "conv-impact",
+          "type": "impact",
+          "bend": 35
+        },
+        {
+          "from": "explain",
+          "to": "conv-impact",
+          "type": "impact",
+          "bend": -12
+        }
+      ]
+    },
+    {
+      "id": "qbo",
+      "title": "QBO Intelligence",
+      "route": "boards/qbo.html",
+      "notes": [
+        {
+          "id": "manual-qbo",
+          "title": "Manual QBO Counting",
+          "type": "Problem",
+          "date": "Approx. Mar 2026",
+          "summary": "QBO totals depended on repeated spreadsheet filtering and inconsistent interpretations.",
+          "x": 12,
+          "y": 20,
+          "rotation": -4
+        },
+        {
+          "id": "definition",
+          "title": "Canonical QBO Definition",
+          "type": "Build",
+          "date": "2026-03-19",
+          "summary": "QBO = Meeting + NDA + RFQ, creating one shared business definition.",
+          "x": 33,
+          "y": 15,
+          "rotation": 3
+        },
+        {
+          "id": "approved",
+          "title": "Approved Meeting Rule",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Meeting QBO analytics use approved meeting records rather than every raw form row.",
+          "x": 51,
+          "y": 26,
+          "rotation": -3
+        },
+        {
+          "id": "date-confusion",
+          "title": "Booked vs Actual Date Confusion",
+          "type": "Bug / Limitation",
+          "date": "Approx. Aug 2026",
+          "summary": "Achievement and execution were being mixed when one date field was used for both questions.",
+          "x": 74,
+          "y": 16,
+          "rotation": 4
+        },
+        {
+          "id": "date-basis",
+          "title": "Separate Date Basis",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Aug 2026",
+          "summary": "Booked Date answers QBO achievement; Actual Date answers meeting execution/outcomes.",
+          "x": 86,
+          "y": 36,
+          "rotation": -2
+        },
+        {
+          "id": "response-id",
+          "title": "Response ID Identity",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Response ID became the strongest identity for a QFR/QBO record.",
+          "x": 63,
+          "y": 47,
+          "rotation": 3
+        },
+        {
+          "id": "fallback-key",
+          "title": "Historical 4-field Fallback",
+          "type": "Build",
+          "date": "2026-09-18",
+          "summary": "Older rows can fall back to Booked Date + SDR + Actual Date + Prospect Email.",
+          "x": 39,
+          "y": 45,
+          "rotation": -5
+        },
+        {
+          "id": "history-gap",
+          "title": "Historical Tracker Gap",
+          "type": "Problem",
+          "date": "2026-09-18",
+          "summary": "1,538 eligible historical records exposed the need to preserve records beyond the current QFR snapshot.",
+          "x": 16,
+          "y": 49,
+          "rotation": 2
+        },
+        {
+          "id": "qfr-sync",
+          "title": "QFR → D1 Sync",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Explicit qfr refresh UPSERTs Meeting/NDA/RFQ records by text Response ID.",
+          "x": 23,
+          "y": 73,
+          "rotation": -3,
+          "version": "3.9.97-ph1p0.6"
+        },
+        {
+          "id": "d1-truth",
+          "title": "D1 Operational Truth",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Normal QBO analytics read qbo_records instead of rebuilding the large QFR Truth snapshot.",
+          "x": 47,
+          "y": 79,
+          "rotation": 4,
+          "version": "3.9.97-ph1p0.7"
+        },
+        {
+          "id": "analytics",
+          "title": "QBO Analytics",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Account, SDR, COE, period and subtype analysis run over narrowed D1 candidates.",
+          "x": 70,
+          "y": 70,
+          "rotation": -4
+        },
+        {
+          "id": "showrate",
+          "title": "Show-rate Analytics",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Meeting outcomes can be summarized as show-rate instead of manually counting outcomes.",
+          "x": 88,
+          "y": 61,
+          "rotation": 3
+        },
+        {
+          "id": "ratings",
+          "title": "Ratings Intelligence",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "SDR/TL rating averages and gaps add quality context beyond pure QBO volume.",
+          "x": 83,
+          "y": 84,
+          "rotation": -2
+        },
+        {
+          "id": "scoreboard",
+          "title": "Weekly / Monthly Scoreboards",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Top-3 SDR Crew and COE Crew views automate recurring performance reporting.",
+          "x": 58,
+          "y": 92,
+          "rotation": 4
+        },
+        {
+          "id": "qbo-impact",
+          "title": "Reporting Impact",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "D1-backed analytics remove repeated QFR parsing and manual workbook calculations.",
+          "x": 28,
+          "y": 91,
+          "rotation": -4,
+          "impact": "Saves SharePoint calls + manual reporting time"
+        }
+      ],
+      "connections": [
+        {
+          "from": "manual-qbo",
+          "to": "definition",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "definition",
+          "to": "approved",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "approved",
+          "to": "date-confusion",
+          "type": "problem",
+          "bend": -18
+        },
+        {
+          "from": "date-confusion",
+          "to": "date-basis",
+          "type": "fix",
+          "bend": 14
+        },
+        {
+          "from": "date-basis",
+          "to": "response-id",
+          "type": "upgrade",
+          "bend": 20
+        },
+        {
+          "from": "response-id",
+          "to": "fallback-key",
+          "type": "dependency",
+          "bend": -12
+        },
+        {
+          "from": "fallback-key",
+          "to": "history-gap",
+          "type": "problem",
+          "bend": 15
+        },
+        {
+          "from": "history-gap",
+          "to": "qfr-sync",
+          "type": "fix",
+          "bend": -18
+        },
+        {
+          "from": "qfr-sync",
+          "to": "d1-truth",
+          "type": "upgrade",
+          "bend": 10
+        },
+        {
+          "from": "d1-truth",
+          "to": "analytics",
+          "type": "upgrade",
+          "bend": -16
+        },
+        {
+          "from": "analytics",
+          "to": "showrate",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "analytics",
+          "to": "ratings",
+          "type": "upgrade",
+          "bend": -16
+        },
+        {
+          "from": "analytics",
+          "to": "scoreboard",
+          "type": "impact",
+          "bend": 28
+        },
+        {
+          "from": "d1-truth",
+          "to": "qbo-impact",
+          "type": "impact",
+          "bend": 35
+        },
+        {
+          "from": "scoreboard",
+          "to": "qbo-impact",
+          "type": "impact",
+          "bend": -14
+        }
+      ]
+    },
+    {
+      "id": "meetings",
+      "title": "Meetings & Scheduling",
+      "route": "boards/meetings.html",
+      "notes": [
+        {
+          "id": "manual-checks",
+          "title": "Manual Meeting Checks",
+          "type": "Problem",
+          "date": "Approx. Aug 2026",
+          "summary": "People repeatedly opened QFR/calendar data to answer basic status questions.",
+          "x": 12,
+          "y": 24,
+          "rotation": -5
+        },
+        {
+          "id": "meeting-query",
+          "title": "Meeting Query Engine",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Chuck can find meetings by date, account/client and contextual question.",
+          "x": 34,
+          "y": 14,
+          "rotation": 3
+        },
+        {
+          "id": "filters",
+          "title": "Account + Date + Timezone Filters",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Queries can combine account/client filters with dates and timezone-aware presentation.",
+          "x": 58,
+          "y": 23,
+          "rotation": -4
+        },
+        {
+          "id": "status-ambiguity",
+          "title": "Status Ambiguity",
+          "type": "Bug / Limitation",
+          "date": "Approx. Aug 2026",
+          "summary": "Event, Verdict and reschedule values needed one consistent business interpretation.",
+          "x": 80,
+          "y": 15,
+          "rotation": 4
+        },
+        {
+          "id": "status-engine",
+          "title": "Canonical Status Engine",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Aug 2026",
+          "summary": "Confirmed, Rescheduled, Show, No Show, Cancelled and pending states are normalized deterministically.",
+          "x": 88,
+          "y": 40,
+          "rotation": -2,
+          "relatedBoard": "qbo"
+        },
+        {
+          "id": "tomorrow",
+          "title": "Tomorrow Meetings",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Separate upcoming-meeting view includes CT/IST timing, SDR and APM context.",
+          "x": 70,
+          "y": 49,
+          "rotation": 3
+        },
+        {
+          "id": "confirmations",
+          "title": "Daily Meeting Confirmations",
+          "type": "Build",
+          "date": "2026-08-24",
+          "summary": "Full snapshot plus later status-only updates reduce continuous manual checking.",
+          "x": 47,
+          "y": 43,
+          "rotation": -3
+        },
+        {
+          "id": "reminders",
+          "title": "Meeting Reminders",
+          "type": "Build",
+          "date": "Approx. Aug 2026",
+          "summary": "Timed reminders surface upcoming calls and confirmation-call needs before the meeting.",
+          "x": 25,
+          "y": 50,
+          "rotation": 4
+        },
+        {
+          "id": "slot-pressure",
+          "title": "Scheduling Collisions",
+          "type": "Problem",
+          "date": "2026-08-27",
+          "summary": "Multiple teams/accounts could collide when choosing meeting times manually.",
+          "x": 18,
+          "y": 76,
+          "rotation": -4
+        },
+        {
+          "id": "slot-engine",
+          "title": "Calendar Slot Engine",
+          "type": "Build",
+          "date": "2026-08-27",
+          "summary": "Chuck models 30-minute availability instead of forcing people to inspect calendars manually.",
+          "x": 43,
+          "y": 80,
+          "rotation": 3
+        },
+        {
+          "id": "slot-rules",
+          "title": "Capacity + Client Rules",
+          "type": "Build",
+          "date": "2026-08-27",
+          "summary": "Maximum three meetings per slot; one client cannot have two meetings at the same time.",
+          "x": 68,
+          "y": 72,
+          "rotation": -3
+        },
+        {
+          "id": "reopen",
+          "title": "Reschedule Reopens Capacity",
+          "type": "Upgrade / Fix",
+          "date": "2026-08-27",
+          "summary": "Rescheduled/declined meetings release capacity instead of blocking stale slots.",
+          "x": 88,
+          "y": 69,
+          "rotation": 4
+        },
+        {
+          "id": "meet-impact",
+          "title": "Meeting Operations Impact",
+          "type": "Impact",
+          "date": "Approx. Aug 2026",
+          "summary": "Status, reminders and slots reduce repeated coordination and calendar inspection.",
+          "x": 57,
+          "y": 93,
+          "rotation": -4,
+          "impact": "Saves coordination time + reduces scheduling errors"
+        }
+      ],
+      "connections": [
+        {
+          "from": "manual-checks",
+          "to": "meeting-query",
+          "type": "problem",
+          "bend": -14
+        },
+        {
+          "from": "meeting-query",
+          "to": "filters",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "filters",
+          "to": "status-ambiguity",
+          "type": "problem",
+          "bend": -14
+        },
+        {
+          "from": "status-ambiguity",
+          "to": "status-engine",
+          "type": "fix",
+          "bend": 14
+        },
+        {
+          "from": "status-engine",
+          "to": "tomorrow",
+          "type": "upgrade",
+          "bend": -15
+        },
+        {
+          "from": "status-engine",
+          "to": "confirmations",
+          "type": "upgrade",
+          "bend": 22
+        },
+        {
+          "from": "confirmations",
+          "to": "reminders",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "reminders",
+          "to": "slot-pressure",
+          "type": "problem",
+          "bend": 28
+        },
+        {
+          "from": "slot-pressure",
+          "to": "slot-engine",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "slot-engine",
+          "to": "slot-rules",
+          "type": "upgrade",
+          "bend": 15
+        },
+        {
+          "from": "slot-rules",
+          "to": "reopen",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "confirmations",
+          "to": "meet-impact",
+          "type": "impact",
+          "bend": 34
+        },
+        {
+          "from": "slot-engine",
+          "to": "meet-impact",
+          "type": "impact",
+          "bend": -18
+        }
+      ]
+    },
+    {
+      "id": "cleaner",
+      "title": "COE Cleaner",
+      "route": "boards/cleaner.html",
+      "notes": [
+        {
+          "id": "manual-clean",
+          "title": "Manual Sheet Cleanup",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "Raw research needed repeated normalization, duplicate checks and channel-specific cleanup.",
+          "x": 12,
+          "y": 20,
+          "rotation": -5
+        },
+        {
+          "id": "cleaner-core",
+          "title": "COE Cleaner",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Automates the transformation of RAW research into standardized campaign outputs.",
+          "x": 34,
+          "y": 14,
+          "rotation": 3
+        },
+        {
+          "id": "outputs",
+          "title": "CALL_DATA + EMAIL_DATA",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Outputs are separated so phone and email usability can be handled independently.",
+          "x": 57,
+          "y": 25,
+          "rotation": -4
+        },
+        {
+          "id": "review",
+          "title": "Owner Review Before Commit",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Cleaning and committing data are intentionally separate actions.",
+          "x": 80,
+          "y": 15,
+          "rotation": 4
+        },
+        {
+          "id": "bridge-retired",
+          "title": "Bridge.xlsx Runtime Path",
+          "type": "Retired",
+          "date": "Approx. Sep 2026",
+          "summary": "The early Cleaner path depended on a SharePoint Excel Bridge and workbook updates.",
+          "x": 87,
+          "y": 39,
+          "rotation": -3,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "notify-checkpoint",
+          "title": "Notify → Then D1",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Team notification must succeed before D1 enqueue; retries do not duplicate the Slack post.",
+          "x": 68,
+          "y": 48,
+          "rotation": 3,
+          "version": "3.9.92-ph1"
+        },
+        {
+          "id": "session-bug",
+          "title": "Upload Lost Session Context",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Cleaner command and later file upload could arrive under different Slack root timestamps.",
+          "x": 44,
+          "y": 43,
+          "rotation": -2
+        },
+        {
+          "id": "session-fix",
+          "title": "Channel + User Session Pointer",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Durable Cleaner state follows the requester across unthreaded command/upload transitions.",
+          "x": 22,
+          "y": 49,
+          "rotation": 5,
+          "version": "3.9.92-ph1"
+        },
+        {
+          "id": "client-scope",
+          "title": "Client-scoped Cleaner",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Cleaner can use organization mappings to show only relevant accounts.",
+          "x": 17,
+          "y": 74,
+          "rotation": -4,
+          "relatedBoard": "mapping-admin"
+        },
+        {
+          "id": "removal-gate",
+          "title": "Removal Gate",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Post-generation/pre-Slack gate decides whether known QBO/bad contact data should be removed.",
+          "x": 40,
+          "y": 79,
+          "rotation": 3
+        },
+        {
+          "id": "qbo-remove",
+          "title": "QBO Suppression",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Existing Meeting/NDA/RFQ prospect emails are removed from reuse where applicable.",
+          "x": 64,
+          "y": 70,
+          "rotation": -4,
+          "relatedBoard": "qbo"
+        },
+        {
+          "id": "channel-separation",
+          "title": "Email ≠ Phone Usability",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Undelivered email removes EMAIL_DATA; unusable phone removes CALL_DATA without automatically killing the other channel.",
+          "x": 86,
+          "y": 63,
+          "rotation": 3
+        },
+        {
+          "id": "removal-grid",
+          "title": "Hash Removal Grid",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-28",
+          "summary": "H00–H63 buckets make repeated removal checks cheap instead of scanning source tables.",
+          "x": 80,
+          "y": 87,
+          "rotation": -2,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "clean-impact",
+          "title": "Cleaner Impact",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Less manual spreadsheet cleanup, fewer reused QBO/bad contacts, and fewer large-table reads.",
+          "x": 48,
+          "y": 94,
+          "rotation": 4,
+          "impact": "Saves human cleanup + D1 reads"
+        }
+      ],
+      "connections": [
+        {
+          "from": "manual-clean",
+          "to": "cleaner-core",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "cleaner-core",
+          "to": "outputs",
+          "type": "upgrade",
+          "bend": 14
+        },
+        {
+          "from": "outputs",
+          "to": "review",
+          "type": "upgrade",
+          "bend": -14
+        },
+        {
+          "from": "review",
+          "to": "bridge-retired",
+          "type": "problem",
+          "bend": 18
+        },
+        {
+          "from": "bridge-retired",
+          "to": "notify-checkpoint",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "cleaner-core",
+          "to": "session-bug",
+          "type": "problem",
+          "bend": 25
+        },
+        {
+          "from": "session-bug",
+          "to": "session-fix",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "session-fix",
+          "to": "client-scope",
+          "type": "upgrade",
+          "bend": 15
+        },
+        {
+          "from": "notify-checkpoint",
+          "to": "removal-gate",
+          "type": "upgrade",
+          "bend": 20
+        },
+        {
+          "from": "removal-gate",
+          "to": "qbo-remove",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "removal-gate",
+          "to": "channel-separation",
+          "type": "upgrade",
+          "bend": 18
+        },
+        {
+          "from": "qbo-remove",
+          "to": "removal-grid",
+          "type": "upgrade",
+          "bend": 30
+        },
+        {
+          "from": "channel-separation",
+          "to": "removal-grid",
+          "type": "upgrade",
+          "bend": -15
+        },
+        {
+          "from": "removal-grid",
+          "to": "clean-impact",
+          "type": "impact",
+          "bend": 12
+        },
+        {
+          "from": "client-scope",
+          "to": "clean-impact",
+          "type": "impact",
+          "bend": 32
+        }
+      ]
+    },
+    {
+      "id": "data-architecture",
+      "title": "Data Architecture",
+      "route": "boards/data-architecture.html",
+      "notes": [
+        {
+          "id": "excel-db",
+          "title": "Excel Acting Like a Database",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "Large workbook reads/writes, Office Scripts and SharePoint calls became the limiting architecture.",
+          "x": 10,
+          "y": 16,
+          "rotation": -5
+        },
+        {
+          "id": "bridge-xlsx",
+          "title": "Bridge.xlsx Stage",
+          "type": "Retired",
+          "date": "Approx. Sep 2026",
+          "summary": "A smaller Excel staging layer reduced Master interaction but still carried workbook failure modes.",
+          "x": 28,
+          "y": 12,
+          "rotation": 3
+        },
+        {
+          "id": "office-bug",
+          "title": "Office Script / Table Limits",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Operations such as table addRows could fail or move cells, exposing spreadsheet fragility.",
+          "x": 46,
+          "y": 22,
+          "rotation": -4
+        },
+        {
+          "id": "d1-move",
+          "title": "Move Operational Storage to D1",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Database storage replaces repeated workbook mutation for operational processing.",
+          "x": 66,
+          "y": 12,
+          "rotation": 4
+        },
+        {
+          "id": "bridge-contacts",
+          "title": "bridge_contacts",
+          "type": "Build",
+          "date": "2026-09-15",
+          "summary": "Reusable researched contacts live in D1 with deterministic bridge IDs and appearances.",
+          "x": 84,
+          "y": 24,
+          "rotation": -2
+        },
+        {
+          "id": "appearances",
+          "title": "Appearances Instead of Duplicates",
+          "type": "Build",
+          "date": "2026-09-15",
+          "summary": "Repeated normalized emails increase appearances instead of creating needless duplicate contacts.",
+          "x": 75,
+          "y": 43,
+          "rotation": 3
+        },
+        {
+          "id": "workbooks",
+          "title": "coe_workbooks",
+          "type": "Build",
+          "date": "2026-09-15",
+          "summary": "Workbook/job history is kept separately from contact rows for auditability.",
+          "x": 52,
+          "y": 38,
+          "rotation": -3
+        },
+        {
+          "id": "master",
+          "title": "COE_MASTER",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Canonical reusable contact inventory receives promoted Bridge contacts and newer outreach evidence.",
+          "x": 30,
+          "y": 41,
+          "rotation": 4
+        },
+        {
+          "id": "na-dbs",
+          "title": "NA Databases",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Contact_NA_DB, Email_NA_DB and QBO_NA_DB preserve unmatched evidence rather than dropping it.",
+          "x": 12,
+          "y": 48,
+          "rotation": -3
+        },
+        {
+          "id": "qbo-records",
+          "title": "qbo_records",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Historical/current Meeting/NDA/RFQ records become persistent operational QBO truth.",
+          "x": 20,
+          "y": 69,
+          "rotation": 3,
+          "relatedBoard": "qbo"
+        },
+        {
+          "id": "scan-cost",
+          "title": "300k-row Scan Cost",
+          "type": "Problem",
+          "date": "2026-09-28",
+          "summary": "COE_MASTER was ~301,484 rows, making repeated full scans wasteful.",
+          "x": 43,
+          "y": 65,
+          "rotation": -4
+        },
+        {
+          "id": "email-index",
+          "title": "Email Hash / ID Directory",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Normalized email hashing narrows lookup directly to candidate records instead of scanning Master.",
+          "x": 64,
+          "y": 60,
+          "rotation": 4
+        },
+        {
+          "id": "removal-grid-data",
+          "title": "Cleaner Removal Grid",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-28",
+          "summary": "64 H00–H63 buckets index QBO/undelivered/unusable removal evidence.",
+          "x": 86,
+          "y": 55,
+          "rotation": -3,
+          "relatedBoard": "cleaner"
+        },
+        {
+          "id": "candidate-reads",
+          "title": "Candidate-only Reads",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Indexes and grids let jobs read only likely rows instead of entire tables.",
+          "x": 88,
+          "y": 77,
+          "rotation": 3,
+          "impact": "Saves D1 row reads"
+        },
+        {
+          "id": "bridge-master",
+          "title": "Bridge → COE_MASTER",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Promotes reusable Bridge contacts into canonical Master with approved merge rules.",
+          "x": 67,
+          "y": 82,
+          "rotation": -4
+        },
+        {
+          "id": "sync-flags",
+          "title": "Per-row Sync Flags",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Marking thousands of Bridge rows synced would create unnecessary write cost and mutation.",
+          "x": 45,
+          "y": 84,
+          "rotation": 4
+        },
+        {
+          "id": "cursor",
+          "title": "Cursor-based Daily Sync",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-28",
+          "summary": "One lightweight cursor tracks daily progress; Bridge rows remain reusable and intact.",
+          "x": 24,
+          "y": 89,
+          "rotation": -3,
+          "version": "3.9.99.8"
+        },
+        {
+          "id": "batching",
+          "title": "10k/day · 1k batches",
+          "type": "Build",
+          "date": "2026-09-28",
+          "summary": "Bridge→Master enforces a 10,000-row daily window and ≤1,000-row batches.",
+          "x": 8,
+          "y": 82,
+          "rotation": 3,
+          "version": "3.9.99.8"
+        },
+        {
+          "id": "hard-bounce-reconciliation",
+          "title": "Hard Bounce Reconciliation",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "17,018 unique valid hard-bounce emails were checked: 11,656 matched COE_MASTER and 5,362 were preserved in Email_NA_DB.",
+          "x": 7,
+          "y": 63,
+          "rotation": -2,
+          "impact": "Preserves outreach evidence without full-table rework"
+        },
+        {
+          "id": "qbo-na-reconciliation",
+          "title": "QBO NA Reconciliation",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "QBO_NA_DB held 570 unmatched records: 564 were not in COE_MASTER and 6 had no valid prospect email.",
+          "x": 14,
+          "y": 96,
+          "rotation": 3,
+          "impact": "Prevents unmatched QBO evidence from being silently lost"
+        },
+        {
+          "id": "data-impact",
+          "title": "Data Architecture Impact",
+          "type": "Impact",
+          "date": "2026-09-28",
+          "summary": "Less Excel dependency, fewer scans/writes, reusable research history and bounded database jobs.",
+          "x": 50,
+          "y": 96,
+          "rotation": -2,
+          "impact": "Saves DB reads/writes + SharePoint/Excel operations"
+        }
+      ],
+      "connections": [
+        {
+          "from": "excel-db",
+          "to": "bridge-xlsx",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "bridge-xlsx",
+          "to": "office-bug",
+          "type": "problem",
+          "bend": 14
+        },
+        {
+          "from": "office-bug",
+          "to": "d1-move",
+          "type": "fix",
+          "bend": -14
+        },
+        {
+          "from": "d1-move",
+          "to": "bridge-contacts",
+          "type": "upgrade",
+          "bend": 16
+        },
+        {
+          "from": "bridge-contacts",
+          "to": "appearances",
+          "type": "upgrade",
+          "bend": -10
+        },
+        {
+          "from": "bridge-contacts",
+          "to": "workbooks",
+          "type": "dependency",
+          "bend": 20
+        },
+        {
+          "from": "bridge-contacts",
+          "to": "master",
+          "type": "upgrade",
+          "bend": 32
+        },
+        {
+          "from": "master",
+          "to": "na-dbs",
+          "type": "dependency",
+          "bend": -12
+        },
+        {
+          "from": "master",
+          "to": "qbo-records",
+          "type": "dependency",
+          "bend": 26
+        },
+        {
+          "from": "master",
+          "to": "scan-cost",
+          "type": "problem",
+          "bend": 10
+        },
+        {
+          "from": "scan-cost",
+          "to": "email-index",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "scan-cost",
+          "to": "removal-grid-data",
+          "type": "fix",
+          "bend": 28
+        },
+        {
+          "from": "email-index",
+          "to": "candidate-reads",
+          "type": "impact",
+          "bend": 16
+        },
+        {
+          "from": "removal-grid-data",
+          "to": "candidate-reads",
+          "type": "impact",
+          "bend": -10
+        },
+        {
+          "from": "master",
+          "to": "bridge-master",
+          "type": "upgrade",
+          "bend": -28
+        },
+        {
+          "from": "bridge-master",
+          "to": "sync-flags",
+          "type": "problem",
+          "bend": 12
+        },
+        {
+          "from": "sync-flags",
+          "to": "cursor",
+          "type": "fix",
+          "bend": -14
+        },
+        {
+          "from": "cursor",
+          "to": "batching",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "candidate-reads",
+          "to": "data-impact",
+          "type": "impact",
+          "bend": 38
+        },
+        {
+          "from": "cursor",
+          "to": "data-impact",
+          "type": "impact",
+          "bend": -20
+        },
+        {
+          "from": "batching",
+          "to": "data-impact",
+          "type": "impact",
+          "bend": 15
+        },
+        {
+          "from": "na-dbs",
+          "to": "hard-bounce-reconciliation",
+          "type": "impact",
+          "bend": -16
+        },
+        {
+          "from": "na-dbs",
+          "to": "qbo-na-reconciliation",
+          "type": "impact",
+          "bend": 22
+        },
+        {
+          "from": "hard-bounce-reconciliation",
+          "to": "data-impact",
+          "type": "impact",
+          "bend": 32
+        },
+        {
+          "from": "qbo-na-reconciliation",
+          "to": "data-impact",
+          "type": "impact",
+          "bend": -26
+        }
+      ]
+    },
+    {
+      "id": "reuse-outreach",
+      "title": "COE Reuse & Outreach",
+      "route": "boards/reuse-outreach.html",
+      "notes": [
+        {
+          "id": "reresearch",
+          "title": "Research Repeated From Scratch",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "Previously researched contacts were being rediscovered instead of reused.",
+          "x": 11,
+          "y": 20,
+          "rotation": -5
+        },
+        {
+          "id": "reuse",
+          "title": "COE_Reuse",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Find usable contacts already in the COE database before starting new research.",
+          "x": 31,
+          "y": 13,
+          "rotation": 3,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "cleaned-again",
+          "title": "Already-cleaned Files Reprocessed",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Historical cleaned workbooks should not run through the Cleaner and mapping flow again.",
+          "x": 53,
+          "y": 24,
+          "rotation": -4
+        },
+        {
+          "id": "db-upsert",
+          "title": "DB_Upsert",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Already-cleaned CALL_DATA can go directly into the D1 append/dedupe pipeline.",
+          "x": 76,
+          "y": 14,
+          "rotation": 4,
+          "relatedBoard": "cleaner"
+        },
+        {
+          "id": "outreach",
+          "title": "Outreach_Update",
+          "type": "Build",
+          "date": "2026-09-22",
+          "summary": "Email/call outreach results are fed back into the canonical contact database.",
+          "x": 87,
+          "y": 38,
+          "rotation": -3
+        },
+        {
+          "id": "hardbounce",
+          "title": "Hard Bounce Evidence",
+          "type": "Build",
+          "date": "2026-09-23",
+          "summary": "Undelivered email evidence marks the email channel unusable until superseded.",
+          "x": 70,
+          "y": 47,
+          "rotation": 3
+        },
+        {
+          "id": "calloutcome",
+          "title": "Unusable Call Outcomes",
+          "type": "Build",
+          "date": "2026-09-23",
+          "summary": "Known non-working phone outcomes suppress CALL reuse without automatically suppressing email.",
+          "x": 46,
+          "y": 42,
+          "rotation": -2
+        },
+        {
+          "id": "channel",
+          "title": "Channel Independence",
+          "type": "Build",
+          "date": "2026-09-23",
+          "summary": "Email and phone usability remain separate signals instead of one all-or-nothing lead state.",
+          "x": 23,
+          "y": 49,
+          "rotation": 5
+        },
+        {
+          "id": "stale-evidence",
+          "title": "Old Failure Could Outlive New Evidence",
+          "type": "Bug / Limitation",
+          "date": "2026-09-23",
+          "summary": "A historical hard bounce or bad outcome must not permanently win over newer positive evidence.",
+          "x": 17,
+          "y": 74,
+          "rotation": -4
+        },
+        {
+          "id": "newer-wins",
+          "title": "Newer Evidence Wins",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-23",
+          "summary": "Delivered can clear older email failure; newer outreach evidence overwrites stale state.",
+          "x": 39,
+          "y": 80,
+          "rotation": 3
+        },
+        {
+          "id": "notfound",
+          "title": "Outreach Contact Not in Master",
+          "type": "Problem",
+          "date": "2026-09-22",
+          "summary": "Useful outreach evidence may arrive for contacts that COE_MASTER does not yet contain.",
+          "x": 62,
+          "y": 70,
+          "rotation": -4
+        },
+        {
+          "id": "na-route",
+          "title": "Route to NA DBs",
+          "type": "Build",
+          "date": "2026-09-22",
+          "summary": "Unmatched email/call evidence goes to Email_NA_DB or Contact_NA_DB for later reconciliation.",
+          "x": 84,
+          "y": 62,
+          "rotation": 4,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "feedback",
+          "title": "Feedback Loop Into Master",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "When candidate matches exist, approved outreach fields update canonical Master instead of remaining in isolated files.",
+          "x": 82,
+          "y": 86,
+          "rotation": -3,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "reuse-impact",
+          "title": "Reuse + Outreach Impact",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Research once, reuse intelligently, and continuously improve contact quality from real outreach.",
+          "x": 48,
+          "y": 94,
+          "rotation": 3,
+          "impact": "Saves human research + prevents stale contact evidence"
+        }
+      ],
+      "connections": [
+        {
+          "from": "reresearch",
+          "to": "reuse",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "reuse",
+          "to": "cleaned-again",
+          "type": "problem",
+          "bend": 14
+        },
+        {
+          "from": "cleaned-again",
+          "to": "db-upsert",
+          "type": "fix",
+          "bend": -14
+        },
+        {
+          "from": "db-upsert",
+          "to": "outreach",
+          "type": "upgrade",
+          "bend": 18
+        },
+        {
+          "from": "outreach",
+          "to": "hardbounce",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "outreach",
+          "to": "calloutcome",
+          "type": "upgrade",
+          "bend": 22
+        },
+        {
+          "from": "hardbounce",
+          "to": "channel",
+          "type": "dependency",
+          "bend": 28
+        },
+        {
+          "from": "calloutcome",
+          "to": "channel",
+          "type": "dependency",
+          "bend": -12
+        },
+        {
+          "from": "channel",
+          "to": "stale-evidence",
+          "type": "problem",
+          "bend": 18
+        },
+        {
+          "from": "stale-evidence",
+          "to": "newer-wins",
+          "type": "fix",
+          "bend": -10
+        },
+        {
+          "from": "outreach",
+          "to": "notfound",
+          "type": "problem",
+          "bend": 38
+        },
+        {
+          "from": "notfound",
+          "to": "na-route",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "na-route",
+          "to": "feedback",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "newer-wins",
+          "to": "feedback",
+          "type": "upgrade",
+          "bend": 26
+        },
+        {
+          "from": "reuse",
+          "to": "reuse-impact",
+          "type": "impact",
+          "bend": 40
+        },
+        {
+          "from": "feedback",
+          "to": "reuse-impact",
+          "type": "impact",
+          "bend": -14
+        }
+      ]
+    },
+    {
+      "id": "mapping-admin",
+      "title": "Mapping & Admin",
+      "route": "boards/mapping-admin.html",
+      "notes": [
+        {
+          "id": "tribal",
+          "title": "Ownership Lived in People’s Heads",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "Account ownership and reporting relationships were difficult to answer consistently.",
+          "x": 11,
+          "y": 20,
+          "rotation": -5
+        },
+        {
+          "id": "hierarchy",
+          "title": "Organization Mapping",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Persistent mappings connect SDR → ATL → Account → COE/APM.",
+          "x": 32,
+          "y": 13,
+          "rotation": 3
+        },
+        {
+          "id": "ownership",
+          "title": "Ownership Questions",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Chuck can answer who owns/manages an account using the mapping layer.",
+          "x": 54,
+          "y": 24,
+          "rotation": -4,
+          "relatedBoard": "conversation"
+        },
+        {
+          "id": "admin-need",
+          "title": "Mappings Change Over Time",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "A static mapping table is not enough when SDRs/accounts/owners change.",
+          "x": 77,
+          "y": 14,
+          "rotation": 4
+        },
+        {
+          "id": "admin",
+          "title": "Mapping Admin",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Authenticated flows add accounts/SDRs, change ownership and activate/deactivate mappings.",
+          "x": 88,
+          "y": 38,
+          "rotation": -3
+        },
+        {
+          "id": "slack-id",
+          "title": "Slack Identity Resolution",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Slack member profiles resolve to canonical human names instead of cryptic owner IDs.",
+          "x": 70,
+          "y": 48,
+          "rotation": 3
+        },
+        {
+          "id": "write-risk",
+          "title": "Unprotected Mapping Writes",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "Mapping changes are operationally sensitive and cannot be accepted from arbitrary chat input.",
+          "x": 45,
+          "y": 42,
+          "rotation": -2
+        },
+        {
+          "id": "password",
+          "title": "Fresh Admin Password Gate",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Every D1 mapping write requires a fresh CHUCK_ADMIN_PASSWORD modal submission.",
+          "x": 22,
+          "y": 49,
+          "rotation": 5,
+          "version": "3.9.97-ph1p0.5"
+        },
+        {
+          "id": "secret-safety",
+          "title": "Password Never Persisted",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Password values are not copied into pending mutation state, queue messages, D1 or audit logs.",
+          "x": 16,
+          "y": 74,
+          "rotation": -4,
+          "impact": "Reduces credential exposure"
+        },
+        {
+          "id": "audit",
+          "title": "Mapping Audit Log",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Idempotent audit records preserve who changed what and when.",
+          "x": 39,
+          "y": 80,
+          "rotation": 3,
+          "version": "3.9.97-ph1p0.5"
+        },
+        {
+          "id": "conflicts",
+          "title": "Mapping Health / Conflict Checks",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Active registered mappings and conflict checks keep hierarchy-derived answers trustworthy.",
+          "x": 64,
+          "y": 70,
+          "rotation": -4
+        },
+        {
+          "id": "docs",
+          "title": "Documents / Line Cards",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Account context also helps users retrieve client documents and line cards without hunting folders.",
+          "x": 86,
+          "y": 62,
+          "rotation": 4
+        },
+        {
+          "id": "mapping-impact",
+          "title": "Mapping Impact",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Ownership becomes queryable, editable under control, and auditable rather than tribal knowledge.",
+          "x": 62,
+          "y": 91,
+          "rotation": -3,
+          "impact": "Saves lookup time + reduces ownership errors"
+        }
+      ],
+      "connections": [
+        {
+          "from": "tribal",
+          "to": "hierarchy",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "hierarchy",
+          "to": "ownership",
+          "type": "upgrade",
+          "bend": 14
+        },
+        {
+          "from": "ownership",
+          "to": "admin-need",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "admin-need",
+          "to": "admin",
+          "type": "fix",
+          "bend": 14
+        },
+        {
+          "from": "admin",
+          "to": "slack-id",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "admin",
+          "to": "write-risk",
+          "type": "problem",
+          "bend": 22
+        },
+        {
+          "from": "write-risk",
+          "to": "password",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "password",
+          "to": "secret-safety",
+          "type": "impact",
+          "bend": 15
+        },
+        {
+          "from": "password",
+          "to": "audit",
+          "type": "upgrade",
+          "bend": -10
+        },
+        {
+          "from": "audit",
+          "to": "conflicts",
+          "type": "upgrade",
+          "bend": 18
+        },
+        {
+          "from": "slack-id",
+          "to": "docs",
+          "type": "upgrade",
+          "bend": 28
+        },
+        {
+          "from": "conflicts",
+          "to": "mapping-impact",
+          "type": "impact",
+          "bend": 20
+        },
+        {
+          "from": "ownership",
+          "to": "mapping-impact",
+          "type": "impact",
+          "bend": 42
+        }
+      ]
+    },
+    {
+      "id": "performance-reliability",
+      "title": "Performance & Reliability",
+      "route": "boards/performance-reliability.html",
+      "notes": [
+        {
+          "id": "single-worker",
+          "title": "One Worker Did Everything",
+          "type": "Problem",
+          "date": "Approx. Sep 2026",
+          "summary": "Conversation traffic and heavy D1/cleaner jobs competed inside one Worker architecture.",
+          "x": 10,
+          "y": 18,
+          "rotation": -5
+        },
+        {
+          "id": "pipeline",
+          "title": "Request Pipeline",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Slack ingress became lightweight and heavy business work moved through staged queue processing.",
+          "x": 28,
+          "y": 12,
+          "rotation": 3,
+          "version": "3.9.97-ph1p0.4"
+        },
+        {
+          "id": "isolation",
+          "title": "CPU Isolation",
+          "type": "Impact",
+          "date": "Approx. Sep 2026",
+          "summary": "Queues isolate long business stages from the original Slack HTTP acknowledgement.",
+          "x": 47,
+          "y": 22,
+          "rotation": -4,
+          "impact": "Protects request CPU + reliability"
+        },
+        {
+          "id": "two-worker",
+          "title": "Two-Worker Split",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Automation stays focused on Slack/conversation while Data Engine owns heavy COE database work.",
+          "x": 67,
+          "y": 12,
+          "rotation": 4,
+          "version": "3.9.99.5"
+        },
+        {
+          "id": "automation",
+          "title": "chuck-automation",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Slack ingress, conversation, QBO/meetings, reporting, cleaner review and orchestration.",
+          "x": 85,
+          "y": 24,
+          "rotation": -2
+        },
+        {
+          "id": "engine",
+          "title": "chuck-data-engine",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Cleaner database lookups, DB_Upsert, Outreach_Update, COE_Reuse and Bridge→Master.",
+          "x": 76,
+          "y": 44,
+          "rotation": 3,
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "queue-latency",
+          "title": "Too Many Queue Hops",
+          "type": "Bug / Limitation",
+          "date": "Approx. Sep 2026",
+          "summary": "PLAN → queue → ANALYZE → queue → PRESENT improved isolation but added visible latency.",
+          "x": 53,
+          "y": 39,
+          "rotation": -3
+        },
+        {
+          "id": "hardening",
+          "title": "Latency + Identity Hardening",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-25",
+          "summary": "Reused lifecycle state, parallelized probes and improved canonical owner rendering.",
+          "x": 31,
+          "y": 45,
+          "rotation": 4,
+          "version": "3.9.99.6"
+        },
+        {
+          "id": "collapse",
+          "title": "Latency Collapse",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-26",
+          "summary": "Normal business requests run PLAN + ANALYZE + PRESENT inside the existing queue consumer.",
+          "x": 15,
+          "y": 55,
+          "rotation": -2,
+          "version": "3.9.99.7"
+        },
+        {
+          "id": "waituntil",
+          "title": "Post-reply waitUntil Work",
+          "type": "Build",
+          "date": "2026-09-26",
+          "summary": "Provenance and learning bookkeeping move after the visible Slack reply when safe.",
+          "x": 23,
+          "y": 77,
+          "rotation": 3,
+          "version": "3.9.99.7"
+        },
+        {
+          "id": "request-id",
+          "title": "Immutable Request IDs",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "One request ID correlates route, analysis, presentation, failure and timing logs.",
+          "x": 45,
+          "y": 72,
+          "rotation": -4
+        },
+        {
+          "id": "dedupe",
+          "title": "Slack Event Dedupe",
+          "type": "Upgrade / Fix",
+          "date": "Approx. Sep 2026",
+          "summary": "Timestamp, actor and thread context prevent reused client_msg_id from suppressing valid messages.",
+          "x": 66,
+          "y": 64,
+          "rotation": 4,
+          "version": "3.9.97-ph1p0.3.1"
+        },
+        {
+          "id": "diagnostics",
+          "title": "Diagnostics + Terminal Failures",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Health/version/diagnostic requests must finish with a visible result instead of ACK-only silence.",
+          "x": 87,
+          "y": 58,
+          "rotation": -3
+        },
+        {
+          "id": "pause",
+          "title": "Pause / Resume Operations",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Sensitive cleaner/data workflows can be paused around deployments and migrations.",
+          "x": 87,
+          "y": 81,
+          "rotation": 3
+        },
+        {
+          "id": "complete",
+          "title": "Completion Notifications",
+          "type": "Build",
+          "date": "Approx. Sep 2026",
+          "summary": "Long data jobs notify requesters on completion instead of requiring repeated status checks.",
+          "x": 63,
+          "y": 86,
+          "rotation": -4
+        },
+        {
+          "id": "bridge-sync",
+          "title": "Bridge Sync Cost Controls",
+          "type": "Upgrade / Fix",
+          "date": "2026-09-28",
+          "summary": "Daily cursor, candidate-only reads and 1,000-row batches keep Bridge→Master bounded.",
+          "x": 40,
+          "y": 91,
+          "rotation": 3,
+          "version": "3.9.99.8",
+          "relatedBoard": "data-architecture"
+        },
+        {
+          "id": "eta",
+          "title": "Queue Position + ETA",
+          "type": "Planned",
+          "date": "Discussed Oct 2026 — Planned",
+          "summary": "When capacity is busy, accept the job, show its queue position/estimated start, then notify on completion.",
+          "x": 14,
+          "y": 89,
+          "rotation": -3,
+          "status": "planned"
+        },
+        {
+          "id": "perf-impact",
+          "title": "Reliability Impact",
+          "type": "Impact",
+          "date": "2026-09-28",
+          "summary": "The system became more responsive under load while preserving idempotency, observability and bounded data work.",
+          "x": 70,
+          "y": 95,
+          "rotation": 2,
+          "impact": "Saves Worker CPU + user waiting uncertainty"
+        }
+      ],
+      "connections": [
+        {
+          "from": "single-worker",
+          "to": "pipeline",
+          "type": "problem",
+          "bend": -12
+        },
+        {
+          "from": "pipeline",
+          "to": "isolation",
+          "type": "impact",
+          "bend": 14
+        },
+        {
+          "from": "pipeline",
+          "to": "two-worker",
+          "type": "upgrade",
+          "bend": -14
+        },
+        {
+          "from": "two-worker",
+          "to": "automation",
+          "type": "upgrade",
+          "bend": 14
+        },
+        {
+          "from": "two-worker",
+          "to": "engine",
+          "type": "upgrade",
+          "bend": -10
+        },
+        {
+          "from": "pipeline",
+          "to": "queue-latency",
+          "type": "problem",
+          "bend": 28
+        },
+        {
+          "from": "queue-latency",
+          "to": "hardening",
+          "type": "fix",
+          "bend": -12
+        },
+        {
+          "from": "hardening",
+          "to": "collapse",
+          "type": "upgrade",
+          "bend": 12
+        },
+        {
+          "from": "collapse",
+          "to": "waituntil",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "collapse",
+          "to": "request-id",
+          "type": "dependency",
+          "bend": 22
+        },
+        {
+          "from": "request-id",
+          "to": "dedupe",
+          "type": "upgrade",
+          "bend": -10
+        },
+        {
+          "from": "dedupe",
+          "to": "diagnostics",
+          "type": "upgrade",
+          "bend": 16
+        },
+        {
+          "from": "diagnostics",
+          "to": "pause",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "pause",
+          "to": "complete",
+          "type": "upgrade",
+          "bend": 14
+        },
+        {
+          "from": "complete",
+          "to": "bridge-sync",
+          "type": "upgrade",
+          "bend": -12
+        },
+        {
+          "from": "bridge-sync",
+          "to": "perf-impact",
+          "type": "impact",
+          "bend": 25
+        },
+        {
+          "from": "collapse",
+          "to": "perf-impact",
+          "type": "impact",
+          "bend": 55
+        },
+        {
+          "from": "complete",
+          "to": "eta",
+          "type": "planned",
+          "bend": 35,
+          "dashed": true
+        },
+        {
+          "from": "eta",
+          "to": "perf-impact",
+          "type": "planned",
+          "bend": -15,
+          "dashed": true
+        }
+      ]
+    }
+  ]
+}
