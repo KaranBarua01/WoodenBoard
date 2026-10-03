@@ -157,9 +157,12 @@ test('release repository includes CI workflow and documentation', () => {
   assert.equal(existsSync(new URL('../README.md', import.meta.url)), true, 'README should exist');
 });
 
-test('Pages workflow self-enables GitHub Pages for a fresh repository', () => {
+test('Pages workflow skips deployment cleanly until GitHub Pages is enabled', () => {
   const workflow = readFileSync(new URL('../.github/workflows/pages.yml', import.meta.url), 'utf8');
-  assert.match(workflow, /uses:\s*actions\/configure-pages@v5[\s\S]*?with:[\s\S]*?enablement:\s*true/, 'configure-pages must enable Pages when the repo has no Pages site yet');
+  assert.match(workflow, /name:\s*Check Pages availability/, 'workflow should probe whether Pages is enabled');
+  assert.match(workflow, /pages_enabled:\s*\$\{\{ steps\.pages\.outputs\.enabled \}\}/, 'build job should expose the Pages availability result');
+  assert.match(workflow, /if:\s*steps\.pages\.outputs\.enabled == 'true'/, 'configure/upload steps should be conditional');
+  assert.match(workflow, /if:\s*needs\.build\.outputs\.pages_enabled == 'true'/, 'deploy job should skip when Pages is disabled');
 });
 
 test('validator rejects non-numeric or out-of-range note coordinates', async () => {
